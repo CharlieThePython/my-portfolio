@@ -3,9 +3,11 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style src="styles/styles.css"></style>
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/text-style.css">
  <title>TV Vintage</title>
  <style>
+  /*
     body {
       display: flex;
       justify-content: center;
@@ -24,8 +26,25 @@
       background-color: #030300;
       background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
       border-radius: 50px;
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     }
+
+    .tv::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px,
+          transparent 2px
+      );
+      pointer-events: none;
+      z-index: 1;
+  }
 
     .tv-screen-box {
       width: 90%;
@@ -48,16 +67,35 @@
         background-color: rgb(167, 245, 255);
         border-radius: 50px;
         border: solid black 5px;
+        filter: grayscale(0.7) contrast(1.3) brightness(0.9) sepia(0.2) hue-rotate(10deg);
     }
+
+    */
+
  </style>
 </head>
 <body>
+  <!--
  <div class="tv">
     <div class="tv-screen-box">
         <div id="tv-screen">
-
         </div>
     </div>
  </div>
+  -->
+
+  <div id="monitor">
+    <!-- the rounded edge near the glass -->
+    <div id="bezel">
+        <div id="main-content-box">
+          <div class="box">
+            <span class="text-header">CARLOS ALMIRA PÉREZ</span>
+            <section class="menu-section">
+              <span class="text-header"></span>
+            </section>
+          </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
