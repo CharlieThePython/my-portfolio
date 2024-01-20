@@ -5,97 +5,79 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles/styles.css">
 <link rel="stylesheet" href="styles/text-style.css">
+<link rel="stylesheet" href="styles/about-me.css">
+<!-- Utilizando el CDN de jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
  <title>TV Vintage</title>
- <style>
-  /*
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
 
-    .tv {
-      width: 50%;
-      height: 50%;
-      margin-bottom: 20%;
-      border: 3px solid #f0f0f0;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      position: relative;
-      background-color: #030300;
-      background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
-      border-radius: 50px;
-    }
-
-    .tv::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.1) 1px,
-          transparent 1px,
-          transparent 2px
-      );
-      pointer-events: none;
-      z-index: 1;
-  }
-
-    .tv-screen-box {
-      width: 90%;
-      height: 90%;
-      border-radius: 50px;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-    }
-
-    #tv-screen{
-        width: 95%;
-        height: 95%;
-        background-color: rgb(167, 245, 255);
-        border-radius: 50px;
-        border: solid black 5px;
-        filter: grayscale(0.7) contrast(1.3) brightness(0.9) sepia(0.2) hue-rotate(10deg);
-    }
-
-    */
-
- </style>
 </head>
 <body>
-  <!--
- <div class="tv">
-    <div class="tv-screen-box">
-        <div id="tv-screen">
-        </div>
-    </div>
- </div>
-  -->
 
   <div id="monitor">
     <!-- the rounded edge near the glass -->
     <div id="bezel">
         <div id="main-content-box">
-          <div class="box">
-            <span class="text-header">CARLOS ALMIRA PÉREZ</span>
-            <section class="menu-section">
-              <span class="text-header"></span>
+          <div class="content-box" id="main-box">
+            <section id="menu-box">
+              <span class="text-header" id="main-text-header">CARLOS ALMIRA PÉREZ</span>
+              <section class="menu-section" id="my-main-menu">
+                <span class="menu-option" id="about-me"><img src="images/play.png" alt="arrow" class="arrow" id="about-me-arrow" width="20em" style="display: none;">ABOUT ME</span>
+                <span class="menu-option" id="my-skills"><img src="images/play.png" alt="arrow" class="arrow" id="my-skills-arrow" width="20em" style="display: none;">MY SKILLS</span>
+                <span class="menu-option" id="my-projects"><img src="images/play.png" alt="arrow" class="arrow" id="my-projects-arrow" width="20em" style="display: none;">MY PROJECTS</span>
+                <span class="menu-option" id="my-contact"><img src="images/play.png" alt="arrow" class="arrow" id="my-contact-arrow" width="20em" style="display: none;">CONTACT</span>
+              </section>
             </section>
+
+
+            <section  id="about-me-box" style="display: none;">
+              <article class="main-header">
+                <h1>ABOUT ME!</h1>
+            </article>
+            <article class="personal-info">
+                <img src="images/personal-photo.jpg" alt="main photo" id="main-photo">
+                <div>
+                    <h2>NAME:</h2>
+                    <h2>LVL:</h2>
+                    <h2>CLASS:</h2>
+                    <h2>COUNTRY:</h2>
+                    <h2>STATUS:</h2>
+                    <h2>SPECIALTY:</h2>
+                </div>
+                <div>
+                    <h2>CARLOS ALMIRA PÉREZ</h2>
+                    <h2>23</h2>
+                    <h2>SOFTWARE DEVELOPER</h2>
+                    <h2><span style="color: red;">SP</span><span style="color: rgb(255, 242, 4);">A</span><span style="color: red;">IN</span></h2>
+                    <h2>STUDENT</h2>
+                    <h2>FRONT-END DEVELOPMENT</h2>
+                </div>
+            </article>
+            <article class="background-text">
+                <p>
+                    I AM AN STUDENT FROM <span class="special-text">GRANADA CITY</span>, THE LAND OF LORCA, ALHAMBRA AND TAPAS!
+                </p>
+                <p>
+                    I GREW UP LOVING I.T. AND CODING, MAINLY BECAUSE OF MY PERSONAL EXPERIENCE WITH VIDEOGAMES AND COMPUTERS.
+                </p>
+                <p>
+                    I STUDIED A <span class="special-text">COMMUNICATION DEGREE</span>, BEFORE I DISCOVER WHAT MY REAL PASION WAS: <span class="special-text">SOFTWARE DEVELOPMENT</span>.
+                </p>
+                <p>
+                    ALSO STUDIED <span class="special-text">ENGLISH</span> (B2 LEVEL) AND <span class="special-text">JAPANESE</span> (N5 LEVEL), APART FROM SPANISH (OF COURSE).
+                </p>
+            </article>
+            <article class="main-footer">
+                <div class="nav-box" id="back-menu">BACK MENU!</div>
+                <div class="nav-box">NEXT STEP!</div>
+            </article>
+          </section>
           </div>
+
         </div>
     </div>
 </div>
+
+<script src="script/main.js" async></script>
 </body>
 </html>

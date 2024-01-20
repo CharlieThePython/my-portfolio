@@ -1,8 +1,11 @@
 .text-header{
     width: 100%;
+    font-size: 1.2em;
     height: auto;
     margin-top: 5%;
     justify-content: center;
     display: flex;
+    color: #274040;
+    transition: width 0.5s ease, height 0.5s ease;
 }
 
