@@ -1,0 +1,25 @@
+#my-skills-box{
+    margin: 2%;
+    padding: 2%;
+    transition: width 0.2s ease, height 0.2s ease;  
+}
+
+.main-skills-box{
+    margin-bottom: 6%;
+}
+.language-section{
+    width: 25%;
+    height: 150px;
+    margin-top: 1%;
+    margin-left: 4%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+.row{
+    width: 100%;
+    display: flex;
+justify-content: space-between;
+}
