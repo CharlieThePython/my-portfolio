@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/pixel-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/text-style.css">
+    <link rel="stylesheet" href="styles/about-me.css">
+    <link rel="stylesheet" href="styles/my_skills.css">
+    <link rel="stylesheet" href="styles/my_projects.css">
+    <!-- Utilizando el CDN de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        /* Agrega estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 65%;
+            height: 65%;
+        }
+    </style>
+
+    <title>TV Vintage</title>
+</head>
+<body>
+
+<div id="monitor">
+    <!-- the rounded edge near the glass -->
+    <div id="bezel">
+        <div id="main-content-box">
+            <div class="content-box" id="main-box" style="width: 90%; height:90%">
+                <section id="my-project-box">
+                    <article class="main-header">
+                        <h1>MY PROJECTS</h1>
+                    </article>
+
+                    <article id="main-projects-box">
+                        <div id="projects-row">
+                            <img src="images/projects-images/tarta-carta.PNG" alt="proyecto tarta"
+                                 class="projects-images" onclick="showProjectDetails('Tarta Carta')">
+                            <img src="images/projects-images/instituto-sapiencia.PNG" alt="proyecto tarta"
+                                 class="projects-images" onclick="showProjectDetails('Instituto Sapiencia')">
+                        </div>
+                        <div id="projects-row">
+                            <img src="images/projects-images/hoja-blanco.PNG" alt="proyecto tarta"
+                                 class="projects-images" onclick="showProjectDetails('Hoja Blanco')">
+                            <img src="images/projects-images/one-4-all.PNG" alt="proyecto tarta"
+                                 class="projects-images" onclick="showProjectDetails('One 4 All')">
+                        </div>
+                    </article>
+                    <article class="main-footer">
+                        <div class="nav-box about-me-section" onclick="showAboutMeSection()"
+                             onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()"
+                             onmouseup="changeMouseNormal()">ABOUT ME
+                        </div>
+                        <div class="nav-box my-skills-section" onclick="showMySkillsSection()">MY SKILLS</div>
+                        <div class="nav-box my-projects-section" onmouseover="changeMousePointer()"
+                             onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">MY PROJECTS
+                        </div>
+                        <div class="nav-box my-contact-section" onmouseover="changeMousePointer()"
+                             onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">CONTACT
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para mostrar información adicional -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeProjectDetails()" style="cursor: pointer; float: right;">&times;</span>
+        <div id="projectDetailsContent">
+
+        </div>
+    </div>
+</div>
+
+<div id="tarta-carta" style="display: none;">
+<h2>HELLO</h2>
+<img src="images/projects-images/tarta-carta.PNG" width="50%" height="50%">
+</div>
+
+<script>
+    const menuSelectedSound = new Audio("sounds/option.mp3");
+    menuSelectedSound.volume = 0.6;
+    const mainImportantBox = document.getElementById("main-box");
+    const boutMeBox = document.getElementById("about-me-box");
+    const skillsBox = document.getElementById("my-skills-box");
+
+    const tartaCarta = document.getElementById("tarta-carta");
+
+    function showAboutMeSection() {
+        menuSelectedSound.play();
+        mainImportantBox.innerHTML = boutMeBox.innerHTML;
+    }
+
+    function showMySkillsSection() {
+        menuSelectedSound.play();
+        mainImportantBox.innerHTML = skillsBox.innerHTML;
+    }
+
+    function changeMousePointer() {
+        document.body.style.cursor = "pointer";
+    }
+
+    function changeMouseNormal() {
+        document.body.style.cursor = "";
+    }
+
+    // Funciones para mostrar y cerrar el modal de detalles del proyecto
+    function showProjectDetails(projectName) {
+        menuSelectedSound.play();
+        const projectDetailsContent = document.getElementById("projectDetailsContent");
+        // Puedes personalizar el contenido del proyecto según el nombre del proyecto
+        projectDetailsContent.innerHTML = tartaCarta.innerHTML;
+        const projectModal = document.getElementById("projectModal");
+        projectModal.style.display = "flex"; // Mostrar el modal
+    }
+
+    function closeProjectDetails() {
+        const projectModal = document.getElementById("projectModal");
+        projectModal.style.display = "none"; // Ocultar el modal
+    }
+</script>
+<script src="script/main.js" async></script>
+</body>
+</html>
