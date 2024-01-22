@@ -12,30 +12,6 @@
     <!-- Utilizando el CDN de jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <style>
-        /* Agrega estilos para el modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 65%;
-            height: 65%;
-        }
-    </style>
-
     <title>TV Vintage</title>
 </head>
 <body>
@@ -53,15 +29,15 @@
                     <article id="main-projects-box">
                         <div id="projects-row">
                             <img src="images/projects-images/tarta-carta.PNG" alt="proyecto tarta"
-                                 class="projects-images" onclick="showProjectDetails('Tarta Carta')">
+                                 class="projects-images" onclick="showProjectDetails('tarta-carta')">
                             <img src="images/projects-images/instituto-sapiencia.PNG" alt="proyecto tarta"
-                                 class="projects-images" onclick="showProjectDetails('Instituto Sapiencia')">
+                                 class="projects-images" onclick="showProjectDetails('instituto-sapiencia')">
                         </div>
                         <div id="projects-row">
-                            <img src="images/projects-images/hoja-blanco.PNG" alt="proyecto tarta"
-                                 class="projects-images" onclick="showProjectDetails('Hoja Blanco')">
+                            <img src="images/projects-images/japaneasy.PNG" alt="proyecto tarta"
+                                 class="projects-images" onclick="showProjectDetails('japaneasy')">
                             <img src="images/projects-images/one-4-all.PNG" alt="proyecto tarta"
-                                 class="projects-images" onclick="showProjectDetails('One 4 All')">
+                                 class="projects-images" onclick="showProjectDetails('one4all')">
                         </div>
                     </article>
                     <article class="main-footer">
@@ -88,19 +64,30 @@
     <div class="modal-content">
         <span onclick="closeProjectDetails()" style="cursor: pointer; float: right;">&times;</span>
         <div id="projectDetailsContent">
-
         </div>
     </div>
 </div>
 
-<div id="tarta-carta" style="display: none;">
-<h2>HELLO</h2>
-<img src="images/projects-images/tarta-carta.PNG" width="50%" height="50%">
+
+<!--AQUÍ IRÁN LOS DIFERENTES VÍDEOS QUE MOSTRARÁN EL CONTENIDO-->
+<div id="tarta-carta" style="display: none;"  class="video-content">
+<h2 class="video-header">TARTA A LA CARTA (MAKE THE CAKE)</h2>
+<video src="videos/tarta-carta-video.mkv" class="proyect-videos" id="tarta-carta-video" onended="reproducirNuevamente('tarta-carta-video')" autoplay></video>
 </div>
 
-<div id="instituto-sapiencia" style="display: none;">
-    <h2>HELLO</h2>
-    <img src="images/projects-images/instituto-sapiencia.PNG" width="50%" height="50%">
+<div id="instituto-sapiencia" style="display: none;"  class="video-content">
+    <h2 class="video-header">INSTITUTO SAPIENCIA (SAPERE AUDE)</h2>
+    <video src="videos/instituto-sapiencia-video.mkv" class="proyect-videos" id="instituto-sapiencia-video" onended="reproducirNuevamente('instituto-sapiencia-video')" autoplay></video>
+</div>
+
+<div id="japaneasy" style="display: none;"  class="video-content">
+    <h2 class="video-header">JAPANEASY: LEARN JAPANESE THE FUNNY WAY</h2>
+    <video src="videos/japaneasy-video.mkv" class="proyect-videos" id="japaneasy-video" onended="reproducirNuevamente('japaneasy-video')" autoplay></video>
+</div>
+
+<div id="one4all" style="display: none;" class="video-content">
+    <h2 class="video-header"    >ONE 4 ALL: ALL YOU NEED IN ONE WEB</h2>
+    <video src="videos/one4all-video.mkv" class="proyect-videos" id="one4all-video" onended="reproducirNuevamente('one4all-video')" muted autoplay></video>
 </div>
 
 <script>
@@ -110,7 +97,7 @@
     const boutMeBox = document.getElementById("about-me-box");
     const skillsBox = document.getElementById("my-skills-box");
 
-    const tartaCarta = document.getElementById("tarta-carta");
+
 
     function showAboutMeSection() {
         menuSelectedSound.play();
@@ -131,11 +118,11 @@
     }
 
     // Funciones para mostrar y cerrar el modal de detalles del proyecto
-    function showProjectDetails(projectName) {
+    function showProjectDetails(cardId) {
+        const cardBox = document.getElementById(cardId);
         menuSelectedSound.play();
         const projectDetailsContent = document.getElementById("projectDetailsContent");
-        // Puedes personalizar el contenido del proyecto según el nombre del proyecto
-        projectDetailsContent.innerHTML = tartaCarta.innerHTML;
+        projectDetailsContent.innerHTML = cardBox.innerHTML;
         const projectModal = document.getElementById("projectModal");
         projectModal.style.display = "flex"; // Mostrar el modal
     }
@@ -143,6 +130,14 @@
     function closeProjectDetails() {
         const projectModal = document.getElementById("projectModal");
         projectModal.style.display = "none"; // Ocultar el modal
+    }
+</script>
+
+<script>
+    function reproducirNuevamente(videoId) {
+        var miVideo = document.getElementById(videoId);
+        miVideo.currentTime = 0;
+        miVideo.play(); //Reproducimos de nuevo el vídeo
     }
 </script>
 <script src="script/main.js" async></script>

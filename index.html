@@ -3,19 +3,21 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="images/pixel-icon.png" type="image/x-icon">
+ <link rel="icon" href="images/pixel-icon.png" type="image/x-icon" id="my-favicon">
 <link rel="stylesheet" href="styles/styles.css">
 <link rel="stylesheet" href="styles/text-style.css">
 <link rel="stylesheet" href="styles/about-me.css">
 <link rel="stylesheet" href="styles/my_skills.css">
+<link rel="stylesheet" href="styles/my_projects.css">
 <!-- Utilizando el CDN de jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
- <title>TV Vintage</title>
+ <title id="dynamicTitle">Carlos Almira Portfolio</title>
+ <style>
 
+</style>
 </head>
 <body>
-
   <div id="monitor">
     <!-- the rounded edge near the glass -->
     <div id="bezel">
@@ -39,12 +41,12 @@
             <article class="personal-info">
                 <img src="images/personal-photo.jpg" alt="main photo" id="main-photo">
                 <div>
-                    <h2>NAME:</h2>
-                    <h2>LVL:</h2>
-                    <h2>CLASS:</h2>
-                    <h2>COUNTRY:</h2>
-                    <h2>STATUS:</h2>
-                    <h2>SPECIALTY:</h2>
+                    <h2 class="about-me-text-header">NAME:</h2>
+                    <h2 class="about-me-text-header">LVL:</h2>
+                    <h2 class="about-me-text-header">CLASS:</h2>
+                    <h2 class="about-me-text-header">COUNTRY:</h2>
+                    <h2 class="about-me-text-header">STATUS:</h2>
+                    <h2 class="about-me-text-header">SPECIALTY:</h2>
                 </div>
                 <div>
                     <h2>CARLOS ALMIRA PÉREZ</h2>
@@ -57,7 +59,7 @@
             </article>
             <article class="background-text">
                 <p>
-                    I AM AN STUDENT FROM <span class="special-text">GRANADA CITY</span>, THE LAND OF LORCA, ALHAMBRA AND TAPAS!
+                    I AM A STUDENT FROM <span class="special-text">GRANADA CITY</span>, THE LAND OF LORCA, ALHAMBRA AND TAPAS!
                 </p>
                 <p>
                     I GREW UP LOVING I.T. AND CODING, MAINLY BECAUSE OF MY PERSONAL EXPERIENCE WITH VIDEOGAMES AND COMPUTERS.
@@ -71,9 +73,9 @@
             </article>
             <article class="main-footer">
               <div class="nav-box about-me-section">ABOUT ME</div>
-              <div class="nav-box my-skills-section" onclick="showMySkillsSection()" onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">MY SKILLS</div>
-              <div class="nav-box my-projects-section"  onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">MY PROJECTS</div>
-              <div class="nav-box my-contact-section"  onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">CONTACT</div>
+              <div class="nav-box my-skills-section" onclick="showMySkillsSection()">MY SKILLS</div>
+              <div class="nav-box my-projects-section"  onclick="showMyProjectsSection()">MY PROJECTS</div>
+              <div class="nav-box my-contact-section">CONTACT</div>
           </article>
           </section>
 
@@ -126,13 +128,77 @@
                     </section>
                 </div>
             </article>
-            <article class="main-footer">
-              <div class="nav-box about-me-section" onclick="showAboutMeSection()" onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">ABOUT ME</div>
+            <article class="main-footer" id="about-me-footer">
+              <div class="nav-box about-me-section" onclick="showAboutMeSection()">ABOUT ME</div>
               <div class="nav-box my-skills-section">MY SKILLS</div>
-              <div class="nav-box my-projects-section"  onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">MY PROJECTS</div>
-              <div class="nav-box my-contact-section"  onmouseover="changeMousePointer()" onmouseout="changeMouseNormal()" onmouseup="changeMouseNormal()">CONTACT</div>
+              <div class="nav-box my-projects-section" onclick="showMyProjectsSection()">MY PROJECTS</div>
+              <div class="nav-box my-contact-section">CONTACT</div>
           </article>
         </section>
+
+        <!--SECCION DE PROYECTOS-->
+        <section id="my-project-box" style="display: none;">
+          <article class="main-header">
+              <h1>MY PROJECTS</h1>
+          </article>
+
+          <article id="main-projects-box">
+              <div id="projects-row">
+                  <img src="images/projects-images/tarta-carta.PNG" alt="proyecto tarta"
+                       class="projects-images" onclick="showProjectDetails('tarta-carta')">
+                  <img src="images/projects-images/instituto-sapiencia.PNG" alt="proyecto tarta"
+                       class="projects-images" onclick="showProjectDetails('instituto-sapiencia')">
+              </div>
+              <div id="projects-row">
+                  <img src="images/projects-images/japaneasy.PNG" alt="proyecto tarta"
+                       class="projects-images" onclick="showProjectDetails('japaneasy')">
+                  <img src="images/projects-images/one-4-all.PNG" alt="proyecto tarta"
+                       class="projects-images" onclick="showProjectDetails('one4all')">
+              </div>
+          </article>
+          <article class="main-footer">
+              <div class="nav-box about-me-section" onclick="showAboutMeSection()">ABOUT ME
+              </div>
+              <div class="nav-box my-skills-section" onclick="showMySkillsSection()">MY SKILLS</div>
+              <div class="nav-box my-projects-section">MY PROJECTS
+              </div>
+              <div class="nav-box my-contact-section">CONTACT
+              </div>
+          </article>
+
+                <!-- Modal para mostrar información adicional -->
+<div id="projectModal" class="modal" style="display: none;">
+  <div class="modal-content">
+      <span onclick="closeProjectDetails()" style="cursor: pointer; float: right;">&times;</span>
+      <div id="projectDetailsContent">
+      </div>
+  </div>
+</div>
+
+<!--AQUÍ IRÁN LOS DIFERENTES VÍDEOS QUE MOSTRARÁN EL CONTENIDO-->
+<div id="tarta-carta" style="display: none;"  class="video-content">
+<h2 class="video-header">TARTA A LA CARTA (MAKE THE CAKE)</h2>
+<video src="videos/tarta-carta-video.mkv" class="proyect-videos" id="tarta-carta-video" onended="reproducirNuevamente('tarta-carta-video')" autoplay></video>
+</div>
+
+<div id="instituto-sapiencia" style="display: none;"  class="video-content">
+  <h2 class="video-header">INSTITUTO SAPIENCIA (SAPERE AUDE)</h2>
+  <video src="videos/instituto-sapiencia-video.mkv" class="proyect-videos" id="instituto-sapiencia-video" onended="reproducirNuevamente('instituto-sapiencia-video')" autoplay></video>
+</div>
+
+<div id="japaneasy" style="display: none;"  class="video-content">
+  <h2 class="video-header">JAPANEASY: LEARN JAPANESE THE FUNNY WAY</h2>
+  <video src="videos/japaneasy-video.mkv" class="proyect-videos" id="japaneasy-video" onended="reproducirNuevamente('japaneasy-video')" autoplay></video>
+</div>
+
+<div id="one4all" style="display: none;" class="video-content">
+  <h2 class="video-header"    >ONE 4 ALL: ALL YOU NEED IN ONE WEB</h2>
+  <video src="videos/one4all-video.mkv" class="proyect-videos" id="one4all-video" onended="reproducirNuevamente('one4all-video')" muted autoplay></video>
+</div>
+      </section>
+
+
+
           </div>
         </div>
     </div>
@@ -143,22 +209,48 @@
   const mainImportantBox = document.getElementById("main-box");
   const boutMeBox = document.getElementById("about-me-box");
   const skillsBox = document.getElementById("my-skills-box");
+  const projectBox = document.getElementById("my-project-box");
+
   function showAboutMeSection(){
     menuSelectedSound.play();
     mainImportantBox.innerHTML = boutMeBox.innerHTML;
+    document.getElementById('my-favicon').href = 'images/M.png';
+    document.getElementById('dynamicTitle').innerText = "About Me";
   }
   function showMySkillsSection(){
     menuSelectedSound.play();
     mainImportantBox.innerHTML = skillsBox.innerHTML;
+    document.getElementById('my-favicon').href = 'images/S.png';
+    document.getElementById('dynamicTitle').innerText  = "My Skills";
   }
+  function showMyProjectsSection(){
+    menuSelectedSound.play();
+    mainImportantBox.innerHTML = projectBox.innerHTML;
+    document.getElementById('my-favicon').href = 'images/P.png';
+    document.getElementById('dynamicTitle').innerText  = "My Projects";
+  }
+    // Funciones para mostrar y cerrar el modal de detalles del proyecto
+    function showProjectDetails(cardId) {
+        const cardBox = document.getElementById(cardId);
+        menuSelectedSound.play();
+        const projectDetailsContent = document.getElementById("projectDetailsContent");
+        projectDetailsContent.innerHTML = cardBox.innerHTML;
+        const projectModal = document.getElementById("projectModal");
+        projectModal.style.display = "flex"; // Mostrar el modal
+    }
 
-function changeMousePointer(){
-  document.body.style.cursor = "pointer";
-}
-function changeMouseNormal(){
-  document.body.style.cursor = "";
-}
+    function closeProjectDetails() {
+        const projectModal = document.getElementById("projectModal");
+        projectModal.style.display = "none"; // Ocultar el modal
+    }
+
+    function reproducirNuevamente(videoId) {
+      var miVideo = document.getElementById(videoId);
+      miVideo.currentTime = 0;
+      miVideo.play(); //Reproducimos de nuevo el vídeo
+  }
 </script>
+
 <script src="script/main.js" async></script>
 </body>
 </html>

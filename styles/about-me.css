@@ -60,6 +60,15 @@
     border-radius: 25px;
 }
 
+.nav-box:hover{
+    cursor: pointer;
+}
 
 
+#about-me-footer{
+    margin-top: 9.1%;
+}
 
+.about-me-text-header{
+    color: #585858;
+}

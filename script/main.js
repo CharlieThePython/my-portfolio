@@ -7,10 +7,12 @@ window.addEventListener("load", () => {
     const myTextHeader = document.getElementById("main-text-header");
     const aboutMeBox = document.getElementById("about-me-box");
     const mySkillsBox = document.getElementById("my-skills-box");
+    const myProyectBox = document.getElementById("my-project-box");
     const menuClasses = Array.from(document.getElementsByClassName("menu-option"));
     const menuBox = document.getElementById("menu-box");
     const optionSelectedAudio = new Audio('../sounds/option-selected2.mp3');
 
+    let myDynamicTitle = document.getElementById("dynamicTitle");
     let myMenu = menuBox.innerHTML; // Agregar 'let' para evitar una variable global
 
     // Manejar el evento 'canplaythrough'
@@ -91,9 +93,18 @@ window.addEventListener("load", () => {
             switch (element.id) {
                 case "about-me":
                     myMainBox.innerHTML = aboutMeBox.innerHTML;
+                    document.getElementById('my-favicon').href = 'images/M.png';
+                    myDynamicTitle.innerText = "About Me";
                     break;
                 case "my-skills":
                     myMainBox.innerHTML = mySkillsBox.innerHTML;
+                    document.getElementById('my-favicon').href = 'images/S.png';
+                    myDynamicTitle.innerText = "My Skills";
+                    break;
+                case "my-projects":
+                    myMainBox.innerHTML = myProyectBox.innerHTML;
+                    document.getElementById('my-favicon').href = 'images/P.png';
+                    myDynamicTitle.innerText = "My Projects";
                     break;
             }
             const backMenuBox = document.getElementById("back-menu");
