@@ -98,7 +98,7 @@ window.addEventListener("load", () => {
             }
             const backMenuBox = document.getElementById("back-menu");
             backMenuBox.addEventListener("click", handleBackMenuClick);
-        }, 500);
+        }, 100);
     }
 
     function handleMenuMousedown(element) {
@@ -127,7 +127,7 @@ window.addEventListener("load", () => {
             showElements(menuClasses);
             $("#main-box").children().hide();
             myMainBox.innerHTML = myMenu;
-        }, 500);
+        }, 100);
     }
 
     function hideElements(boxElements) {
