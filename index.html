@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="styles/about-me.css">
 <link rel="stylesheet" href="styles/my_skills.css">
 <link rel="stylesheet" href="styles/my_projects.css">
+<link rel="stylesheet" href="styles/contact.css">
 <!-- Utilizando el CDN de jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -52,7 +53,7 @@
                     <h2>CARLOS ALMIRA PÉREZ</h2>
                     <h2>23</h2>
                     <h2>SOFTWARE DEVELOPER</h2>
-                    <h2><span style="color: red;">SP</span><span style="color: rgb(255, 242, 4);">A</span><span style="color: red;">IN</span></h2>
+                    <h2>SPAIN</h2>
                     <h2>STUDENT</h2>
                     <h2>FRONT-END DEVELOPMENT</h2>
                 </div>
@@ -75,7 +76,7 @@
               <div class="nav-box about-me-section">ABOUT ME</div>
               <div class="nav-box my-skills-section" onclick="showMySkillsSection()">MY SKILLS</div>
               <div class="nav-box my-projects-section"  onclick="showMyProjectsSection()">MY PROJECTS</div>
-              <div class="nav-box my-contact-section">CONTACT</div>
+              <div class="nav-box my-contact-section" onclick="showMyContactSection()">CONTACT</div>
           </article>
           </section>
 
@@ -87,43 +88,43 @@
             <article class="main-skills-box">
                 <div class="row">
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="" width="100px">
+                        <img src="images/code-images/1.png" alt=""  class="code-images">
                         <progress max="100" value="95">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/1024px-CSS3_logo.svg.png" alt="" width="90px">
+                        <img src="images/code-images/2.png" alt=""  class="code-images">
                         <progress max="100" value="90">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/js-logo.png" alt="" width="90px">
+                        <img src="images/js-logo.png" alt=""  class="code-images">
                         <progress max="100" value="65">70%</progress>
                     </section>
                 </div>
                 <div class="row">
                     <section class="language-section">
-                        <img src="images/php-logo.png" alt="" width="90px" style="border-radius: 50px;">
+                        <img src="images/php-logo.png" alt="" style="border-radius: 50px;" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="" width="90px" >
+                        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="" class="code-images" >
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sql_data_base_with_logo.svg/2560px-Sql_data_base_with_logo.svg.png" alt="" width="90px">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sql_data_base_with_logo.svg/2560px-Sql_data_base_with_logo.svg.png" alt="" class="code-images">
                         <progress max="100" value="90">70%</progress>
                     </section>
                 </div>
                 <div class="row">
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="" width="100px">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="" class="code-images">
                         <progress max="100" value="95">95%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png" alt="" width="90px">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png" alt="" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/bootstrap-logo.png" alt="" width="90px">
+                        <img src="images/bootstrap-logo.png" alt="" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                 </div>
@@ -132,7 +133,7 @@
               <div class="nav-box about-me-section" onclick="showAboutMeSection()">ABOUT ME</div>
               <div class="nav-box my-skills-section">MY SKILLS</div>
               <div class="nav-box my-projects-section" onclick="showMyProjectsSection()">MY PROJECTS</div>
-              <div class="nav-box my-contact-section">CONTACT</div>
+              <div class="nav-box my-contact-section" onclick="showMyContactSection()">CONTACT</div>
           </article>
         </section>
 
@@ -162,72 +163,110 @@
               <div class="nav-box my-skills-section" onclick="showMySkillsSection()">MY SKILLS</div>
               <div class="nav-box my-projects-section">MY PROJECTS
               </div>
-              <div class="nav-box my-contact-section">CONTACT
+              <div class="nav-box my-contact-section" onclick="showMyContactSection()">CONTACT
               </div>
           </article>
 
                 <!-- Modal para mostrar información adicional -->
-<div id="projectModal" class="modal" style="display: none;">
-  <div class="modal-content">
-      <span onclick="closeProjectDetails()" style="cursor: pointer; float: right;">&times;</span>
-      <div id="projectDetailsContent">
+        <div id="projectModal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <span onclick="closeProjectDetails()" style="cursor: pointer; float: right;">&times;</span>
+          <div id="projectDetailsContent">
       </div>
   </div>
 </div>
 
 <!--AQUÍ IRÁN LOS DIFERENTES VÍDEOS QUE MOSTRARÁN EL CONTENIDO-->
-<div id="tarta-carta" style="display: none;"  class="video-content">
-<h2 class="video-header">TARTA A LA CARTA (MAKE THE CAKE)</h2>
-<video src="videos/tarta-carta-video.mkv" class="proyect-videos" id="tarta-carta-video" onended="reproducirNuevamente('tarta-carta-video')" autoplay></video>
-</div>
+        <div id="tarta-carta" style="display: none;"  class="video-content">
+          <h2 class="video-header">TARTA A LA CARTA (MAKE THE CAKE)</h2>
+          <video src="videos/tarta-carta-video.mkv" class="proyect-videos" id="tarta-carta-video" onended="reproducirNuevamente('tarta-carta-video')" autoplay></video>
+        </div>
 
-<div id="instituto-sapiencia" style="display: none;"  class="video-content">
-  <h2 class="video-header">INSTITUTO SAPIENCIA (SAPERE AUDE)</h2>
-  <video src="videos/instituto-sapiencia-video.mkv" class="proyect-videos" id="instituto-sapiencia-video" onended="reproducirNuevamente('instituto-sapiencia-video')" autoplay></video>
-</div>
+        <div id="instituto-sapiencia" style="display: none;"  class="video-content">
+         <h2 class="video-header">INSTITUTO SAPIENCIA (SAPERE AUDE)</h2>
+         <video src="videos/instituto-sapiencia-video.mkv" class="proyect-videos" id="instituto-sapiencia-video" onended="reproducirNuevamente('instituto-sapiencia-video')" autoplay></video>
+        </div>
 
-<div id="japaneasy" style="display: none;"  class="video-content">
-  <h2 class="video-header">JAPANEASY: LEARN JAPANESE THE FUNNY WAY</h2>
-  <video src="videos/japaneasy-video.mkv" class="proyect-videos" id="japaneasy-video" onended="reproducirNuevamente('japaneasy-video')" autoplay></video>
-</div>
+        <div id="japaneasy" style="display: none;"  class="video-content">
+          <h2 class="video-header">JAPANEASY: LEARN JAPANESE THE FUNNY WAY</h2>
+          <video src="videos/japaneasy-video.mkv" class="proyect-videos" id="japaneasy-video" onended="reproducirNuevamente('japaneasy-video')" autoplay></video>
+          </div>
 
-<div id="one4all" style="display: none;" class="video-content">
-  <h2 class="video-header"    >ONE 4 ALL: ALL YOU NEED IN ONE WEB</h2>
-  <video src="videos/one4all-video.mkv" class="proyect-videos" id="one4all-video" onended="reproducirNuevamente('one4all-video')" muted autoplay></video>
-</div>
+        <div id="one4all" style="display: none;" class="video-content">
+          <h2 class="video-header"    >ONE 4 ALL: ALL YOU NEED IN ONE WEB</h2>
+          <video src="videos/one4all-video.mkv" class="proyect-videos" id="one4all-video" onended="reproducirNuevamente('one4all-video')" muted autoplay></video>
+        </div>
       </section>
 
 
+        <!--ZONA DE CONTACTO-->
+        <section id="my-contact-box" style="display: none;">
+          <article class="main-header">
+              <h1>MY CONTACT</h1>
+          </article>
 
+          <article id="main-contact-content">
+              <div class="contact-boxes">
+                  <img src="icons/github-ico.png" alt="github icon" class="contact-icons"><span class="my-contact-text">@CharlieThePython</span>
+              </div>
+              <div class="contact-boxes">
+                  <img src="icons/gmail-ico.png" alt="gmail icon" class="contact-icons"><span class="my-contact-text">carlosalmiraperez@gmail.com</span>
+              </div>
+              <div class="contact-boxes">
+                  <img src="icons/linkedin-ico.png" alt="linkedin icon" class="contact-icons"><span class="my-contact-text">Carlos Almira Pérez</span>
+              </div>
+              <div class="contact-boxes">
+                  <img src="icons/codepen-ico.png" alt="linkedin icon" class="contact-icons"><span class="my-contact-text">@CarlosAlmira</span>
+              </div>
+          </article>
+          <article class="main-footer" id="contact-footer">
+              <div class="nav-box-contact about-me-section" onclick="showAboutMeSection()">ABOUT ME</div>
+              <div class="nav-box-contact my-skills-section" onclick="showMySkillsSection()">MY SKILLS</div>
+              <div class="nav-box-contact my-projects-section" onclick="showMyProjectsSection()">MY PROJECTS</div>
+              <div class="nav-box-contact my-contact-section">CONTACT</div>
+          </article>
+      </section>
           </div>
         </div>
     </div>
 </div>
 <script>
-  const menuSelectedSound = new Audio ("sounds/option.mp3")
+  const menuSelectedSound = new Audio ("sounds/option-selected2.mp3")
   menuSelectedSound.volume = 0.6;
   const mainImportantBox = document.getElementById("main-box");
   const boutMeBox = document.getElementById("about-me-box");
   const skillsBox = document.getElementById("my-skills-box");
   const projectBox = document.getElementById("my-project-box");
+  const contactBox = document.getElementById("my-contact-box");
 
   function showAboutMeSection(){
     menuSelectedSound.play();
+    resizeBox();
     mainImportantBox.innerHTML = boutMeBox.innerHTML;
     document.getElementById('my-favicon').href = 'images/M.png';
     document.getElementById('dynamicTitle').innerText = "About Me";
   }
   function showMySkillsSection(){
+    resizeBox();
     menuSelectedSound.play();
     mainImportantBox.innerHTML = skillsBox.innerHTML;
     document.getElementById('my-favicon').href = 'images/S.png';
     document.getElementById('dynamicTitle').innerText  = "My Skills";
   }
   function showMyProjectsSection(){
+    resizeBox();
     menuSelectedSound.play();
     mainImportantBox.innerHTML = projectBox.innerHTML;
     document.getElementById('my-favicon').href = 'images/P.png';
     document.getElementById('dynamicTitle').innerText  = "My Projects";
+  }
+
+  function showMyContactSection(){
+    resizeTinyBox();
+    menuSelectedSound.play();
+    mainImportantBox.innerHTML = contactBox.innerHTML;
+    document.getElementById('my-favicon').href = 'images/C.png';
+    document.getElementById('dynamicTitle').innerText  = "My Contact";
   }
     // Funciones para mostrar y cerrar el modal de detalles del proyecto
     function showProjectDetails(cardId) {
@@ -249,6 +288,17 @@
       miVideo.currentTime = 0;
       miVideo.play(); //Reproducimos de nuevo el vídeo
   }
+
+  function resizeBox() {
+    mainImportantBox.style.width = "90%";
+    mainImportantBox.style.height = "90%";
+}
+
+function resizeTinyBox() {
+  mainImportantBox.style.width = "50%";
+  mainImportantBox.style.height = "75%";
+}
+
 </script>
 
 <script src="script/main.js" async></script>

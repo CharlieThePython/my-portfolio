@@ -14,7 +14,8 @@
 
 .personal-info{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around
+;
     background-color: #08F8F8;
     line-height: 16px;
     border-radius: 25px;
@@ -32,7 +33,7 @@
 #main-photo{
     width: 350px;
     height: 400px;
-    border-radius: 50px;
+    border-radius: 100px;
     object-fit: cover;
 }
 

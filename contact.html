@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/pixel-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/text-style.css">
+    <link rel="stylesheet" href="styles/about-me.css">
+    <link rel="stylesheet" href="styles/my_skills.css">
+    <link rel="stylesheet" href="styles/my_projects.css">
+    <link rel="stylesheet" href="styles/contact.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>TV Vintage</title>
+</head>
+<body>
+
+<div id="monitor">
+    <!-- the rounded edge near the glass -->
+    <div id="bezel">
+        <div id="main-content-box">
+            <div class="content-box" id="main-box" style="width: 50%; height:75%">
+                <section id="my-contact-box">
+                    <article class="main-header">
+                        <h1>MY CONTACT</h1>
+                    </article>
+
+                    <article id="main-contact-content">
+                        <div class="contact-boxes">
+                            <img src="icons/github-ico.png" alt="github icon" class="contact-icons"><span class="my-contact-text">@CharlieThePython</span>
+                        </div>
+                        <div class="contact-boxes">
+                            <img src="icons/gmail-ico.png" alt="gmail icon" class="contact-icons"><span class="my-contact-text">carlosalmiraperez@gmail.com</span>
+                        </div>
+                        <div class="contact-boxes">
+                            <img src="icons/linkedin-ico.png" alt="linkedin icon" class="contact-icons"><span class="my-contact-text">Carlos Almira Pérez</span>
+                        </div>
+                        <div class="contact-boxes">
+                            <img src="icons/code-pen-ico.png" alt="linkedin icon" class="contact-icons"><span class="my-contact-text">@CarlosAlmira</span>
+                        </div>
+                    </article>
+                    <article class="main-footer" id="contact-footer">
+                        <div class="nav-box about-me-section" onclick="showAboutMeSection()">ABOUT ME</div>
+                        <div class="nav-box my-skills-section">MY SKILLS</div>
+                        <div class="nav-box my-projects-section" onclick="showMyProjectsSection()">MY PROJECTS</div>
+                        <div class="nav-box my-contact-section">CONTACT</div>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const menuSelectedSound = new Audio("sounds/option.mp3");
+    menuSelectedSound.volume = 0.6;
+    const mainImportantBox = document.getElementById("main-box");
+    const boutMeBox = document.getElementById("about-me-box");
+    const skillsBox = document.getElementById("my-skills-box");
+
+
+
+    function showAboutMeSection() {
+        menuSelectedSound.play();
+        mainImportantBox.innerHTML = boutMeBox.innerHTML;
+    }
+
+    function showMySkillsSection() {
+        menuSelectedSound.play();
+        mainImportantBox.innerHTML = skillsBox.innerHTML;
+    }
+
+    function changeMousePointer() {
+        document.body.style.cursor = "pointer";
+    }
+
+    function changeMouseNormal() {
+        document.body.style.cursor = "";
+    }
+
+    // Funciones para mostrar y cerrar el modal de detalles del proyecto
+    function showProjectDetails(cardId) {
+        const cardBox = document.getElementById(cardId);
+        menuSelectedSound.play();
+        const projectDetailsContent = document.getElementById("projectDetailsContent");
+        projectDetailsContent.innerHTML = cardBox.innerHTML;
+        const projectModal = document.getElementById("projectModal");
+        projectModal.style.display = "flex"; // Mostrar el modal
+    }
+
+    function closeProjectDetails() {
+        const projectModal = document.getElementById("projectModal");
+        projectModal.style.display = "none"; // Ocultar el modal
+    }
+</script>
+
+<script>
+    function reproducirNuevamente(videoId) {
+        var miVideo = document.getElementById(videoId);
+        miVideo.currentTime = 0;
+        miVideo.play(); //Reproducimos de nuevo el vídeo
+    }
+</script>
+<script src="script/main.js" async></script>
+</body>
+</html>

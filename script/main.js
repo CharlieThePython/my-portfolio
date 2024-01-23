@@ -8,17 +8,14 @@ window.addEventListener("load", () => {
     const aboutMeBox = document.getElementById("about-me-box");
     const mySkillsBox = document.getElementById("my-skills-box");
     const myProyectBox = document.getElementById("my-project-box");
+    const myContactBox = document.getElementById("my-contact-box");
     const menuClasses = Array.from(document.getElementsByClassName("menu-option"));
     const menuBox = document.getElementById("menu-box");
-    const optionSelectedAudio = new Audio('../sounds/option-selected2.mp3');
+    const optionSelectedAudio = new Audio('../sounds/option-selected.mp3');
 
     let myDynamicTitle = document.getElementById("dynamicTitle");
     let myMenu = menuBox.innerHTML; // Agregar 'let' para evitar una variable global
 
-    // Manejar el evento 'canplaythrough'
-    optionSelectedAudio.addEventListener('canplaythrough', () => {
-        console.log('El audio se ha cargado completamente.');
-    });
 
     menuClasses.forEach((menuElement) => {
         menuElement.addEventListener("mouseover", () => {
@@ -64,8 +61,6 @@ window.addEventListener("load", () => {
     }
 
     function handleMenuMouseout(element) {
-        optionSelectedAudio.pause();
-        optionSelectedAudio.currentTime = 0;
         let menuId = element.id;
         switch (menuId) {
             case 'about-me':
@@ -84,32 +79,38 @@ window.addEventListener("load", () => {
     }
 
     function handleMenuClick(element) {
-        optionSelectedAudio.play();
         setTimeout(() => {
             document.body.style.cursor = "";
             $("#menu-box").children().hide();
-            resizeBox();
 
             switch (element.id) {
                 case "about-me":
+                    optionSelectedAudio.play();
+                    resizeBox();
                     myMainBox.innerHTML = aboutMeBox.innerHTML;
                     document.getElementById('my-favicon').href = 'images/M.png';
                     myDynamicTitle.innerText = "About Me";
                     break;
                 case "my-skills":
+                    resizeBox();
                     myMainBox.innerHTML = mySkillsBox.innerHTML;
                     document.getElementById('my-favicon').href = 'images/S.png';
                     myDynamicTitle.innerText = "My Skills";
                     break;
                 case "my-projects":
+                    resizeBox();
                     myMainBox.innerHTML = myProyectBox.innerHTML;
                     document.getElementById('my-favicon').href = 'images/P.png';
                     myDynamicTitle.innerText = "My Projects";
                     break;
+                case "my-contact":
+                    resizeTinyBox();
+                    myMainBox.innerHTML = myContactBox.innerHTML;
+                    document.getElementById('my-favicon').href = 'images/C.png';
+                    myDynamicTitle.innerText = "My Contact";
+                    break;
             }
-            const backMenuBox = document.getElementById("back-menu");
-            backMenuBox.addEventListener("click", handleBackMenuClick);
-        }, 100);
+        }, 50);
     }
 
     function handleMenuMousedown(element) {
@@ -125,6 +126,10 @@ window.addEventListener("load", () => {
         myMainBox.style.width = "90%";
         myMainBox.style.height = "90%";
     }
+    function resizeTinyBox() {
+        myMainBox.style.width = "50%";
+        myMainBox.style.height = "75%";
+    }
 
     function minimizeBox() {
         myMainBox.style.width = "25%";
@@ -132,7 +137,6 @@ window.addEventListener("load", () => {
     }
 
     function handleBackMenuClick() {
-        optionSelectedAudio.play();
         setTimeout(() => {
             minimizeBox();
             showElements(menuClasses);
