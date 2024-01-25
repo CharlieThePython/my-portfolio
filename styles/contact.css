@@ -33,7 +33,7 @@
 }
 
 #contact-footer{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .nav-box-contact{
@@ -45,4 +45,8 @@
 
 .nav-box-contact:hover{
     cursor: pointer;
+}
+
+.my-contact-text{
+    font-size: 0.9em;
 }

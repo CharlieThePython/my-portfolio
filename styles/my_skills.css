@@ -5,7 +5,7 @@
 }
 
 .main-skills-box{
-    margin-bottom: 6%;
+    margin-bottom: 1%;
 }
 .language-section{
     width: 25%;
@@ -21,10 +21,10 @@
 .row{
     width: 100%;
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .code-images{
-    width: 90px;
+    width: 80px;
 
 }
