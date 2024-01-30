@@ -133,3 +133,8 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
+
+.menu-option:hover{
+  background-color: #80B050;
+  cursor: pointer;
+}

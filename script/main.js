@@ -56,8 +56,6 @@ window.addEventListener("load", () => {
             default:
                 mySkillsArrow.style.display = "";
         }
-        element.style.backgroundColor = "#80B050";
-        document.body.style.cursor = "pointer";
     }
 
     function handleMenuMouseout(element) {
@@ -75,7 +73,6 @@ window.addEventListener("load", () => {
             default:
                 mySkillsArrow.style.display = "none";
         }
-        element.style.backgroundColor = "#B8F878";
     }
 
     function handleMenuClick(element) {
