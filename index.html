@@ -103,21 +103,21 @@
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="" class="code-images" >
+                        <img src="images/code-images/5.png" alt="" class="code-images" >
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sql_data_base_with_logo.svg/2560px-Sql_data_base_with_logo.svg.png" alt="" class="code-images">
+                        <img src="images/code-images/6.svg.png" alt="" class="code-images">
                         <progress max="100" value="90">70%</progress>
                     </section>
                 </div>
                 <div class="row">
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="" class="code-images">
+                        <img src="images/code-images/7.png" alt="" class="code-images">
                         <progress max="100" value="95">95%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png" alt="" class="code-images">
+                        <img src="images/code-images/8.svg.png" alt="" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
@@ -267,8 +267,8 @@
   }
     // Funciones para mostrar y cerrar el modal de detalles del proyecto
     function showProjectDetails(cardId) {
+      menuSelectedSound.play();
         const cardBox = document.getElementById(cardId);
-        menuSelectedSound.play();
         const projectDetailsContent = document.getElementById("projectDetailsContent");
         projectDetailsContent.innerHTML = cardBox.innerHTML;
         const projectModal = document.getElementById("projectModal");
