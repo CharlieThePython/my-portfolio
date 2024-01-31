@@ -11,14 +11,14 @@
 
 
 .projects-images{
-    width: 32%;
+    width: 29%;
     border-radius: 50px;
     object-fit:cover;
     transition: width 0.3s ease, height 0.3s ease;
 }
 
 .projects-images:hover{
-    width: 35%;
+    width: 32%;
     border-radius: 50px;
     object-fit:cover;
     transition: width 0.3s ease-out, height 0.3s ease-out;
@@ -40,8 +40,7 @@
         margin-top: 1%;
         margin-left: 18%;
     }
-
-        /* Agrega estilos para el modal */
+    
         .modal {
             display: none;
             position: fixed;

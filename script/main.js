@@ -1,20 +1,25 @@
 window.addEventListener("load", () => {
+    //DEFINCIÓN DE CONSTANTES
+
+        //DEFINICIÓN DE CONSTANTES DE FLECHA
     const aboutMeArrow = document.getElementById("about-me-arrow");
     const myProjectsArrow = document.getElementById("my-projects-arrow");
     const myContactArrow = document.getElementById("my-contact-arrow");
     const mySkillsArrow = document.getElementById("my-skills-arrow");
+
+        //DEFINICIÓN DE CAJAS
     const myMainBox = document.getElementById("main-box");
-    const myTextHeader = document.getElementById("main-text-header");
     const aboutMeBox = document.getElementById("about-me-box");
     const mySkillsBox = document.getElementById("my-skills-box");
     const myProyectBox = document.getElementById("my-project-box");
     const myContactBox = document.getElementById("my-contact-box");
+        //DEFINICIÓN DE LAS DIFERENTES OPCIONES DEL MENÚ
     const menuClasses = Array.from(document.getElementsByClassName("menu-option"));
     const menuBox = document.getElementById("menu-box");
-    const optionSelectedAudio = new Audio('../sounds/option-selected.mp3');
 
+    //PARA CAMBIAR EL TÍTULO DINÁMICAMENTE
     let myDynamicTitle = document.getElementById("dynamicTitle");
-    let myMenu = menuBox.innerHTML; // Agregar 'let' para evitar una variable global
+
 
 
     menuClasses.forEach((menuElement) => {
@@ -40,7 +45,7 @@ window.addEventListener("load", () => {
 
     });
 
-    // Funciones para manejar eventos del menú
+    // Funciones para manejar eventos del menú con respecto al ratón
     function handleMenuMouseover(element) {
         let menuId = element.id;
         switch (menuId) {
@@ -79,10 +84,9 @@ window.addEventListener("load", () => {
         setTimeout(() => {
             document.body.style.cursor = "";
             $("#menu-box").children().hide();
-
+            optionSelectedAudio.play();
             switch (element.id) {
                 case "about-me":
-                    optionSelectedAudio.play();
                     resizeBox();
                     myMainBox.innerHTML = aboutMeBox.innerHTML;
                     document.getElementById('my-favicon').href = 'images/M.png';
@@ -127,34 +131,6 @@ window.addEventListener("load", () => {
         myMainBox.style.width = "50%";
         myMainBox.style.height = "75%";
     }
-
-    function minimizeBox() {
-        myMainBox.style.width = "25%";
-        myMainBox.style.height = "50%";
-    }
-
-    function handleBackMenuClick() {
-        setTimeout(() => {
-            minimizeBox();
-            showElements(menuClasses);
-            $("#main-box").children().hide();
-            myMainBox.innerHTML = myMenu;
-        }, 100);
-    }
-
-    function hideElements(boxElements) {
-        boxElements.forEach((element) => {
-            element.style.display = "none";
-        });
-    }
-
-    function showElements(boxElements) {
-        boxElements.forEach((element) => {
-            element.style.display = "";
-        });
-    }
-
-
 
 });
 

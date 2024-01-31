@@ -16,8 +16,9 @@
  <title id="dynamicTitle">Carlos Almira Portfolio</title>
 </head>
 <body>
+      <!--CAJA PRINCIPAL QUE CONTIENE TODO EL MONITOR-->
   <div id="monitor">
-    <!-- the rounded edge near the glass -->
+    <!-- ESTA ES LA CARCASA QUE SE ENCUENTRA DENTRO DEL MONITOR, TÍPICA DE PRODUCTOS COMO LA GAME BOY Y TV DE TUBO -->
     <div id="bezel">
         <div id="main-content-box">
           <div class="content-box" id="main-box">
@@ -31,13 +32,15 @@
               </section>
             </section>
 
+            <!--SUBSECCIONES QUE SE IRÁN CARGANDO CONFORME EL USUARIO SE MUEVA POR LOS MENÚS-->
 
+              <!--SECCIÓN ABOUT ME-->
             <section  id="about-me-box" style="display: none;">
               <article class="main-header">
                 <h1>ABOUT ME!</h1>
             </article>
             <article class="personal-info">
-                <img src="images/personal-photo.jpg" alt="main photo" id="main-photo">
+                <img src="images/personal-photo.jpg" alt="main photo de Carlos Almira Pérez guapetón" id="main-photo">
                 <div>
                     <h2 class="about-me-text-header">NAME:</h2>
                     <h2 class="about-me-text-header">LVL:</h2>
@@ -77,7 +80,7 @@
           </article>
           </section>
 
-          <!--SECCIÓN DE SKILLS-->
+            <!--SECCIÓN DE SKILLS-->
           <section  id="my-skills-box" style="display: none;">
             <article class="main-header">
                 <h1>MY SKILLS</h1>
@@ -85,43 +88,43 @@
             <article class="main-skills-box">
                 <div class="row">
                     <section class="language-section">
-                        <img src="images/code-images/1.png" alt=""  class="code-images">
+                        <img src="images/code-images/1.png" alt="html logo"  class="code-images">
                         <progress max="100" value="95">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt=""  class="code-images">
+                        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="css logo"  class="code-images">
                         <progress max="100" value="90">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/js-logo.png" alt=""  class="code-images">
+                        <img src="images/js-logo.png" alt="javascript logo"  class="code-images">
                         <progress max="100" value="65">70%</progress>
                     </section>
                 </div>
                 <div class="row">
                     <section class="language-section">
-                        <img src="images/php-logo.png" alt="" style="border-radius: 50px;" class="code-images">
+                        <img src="images/php-logo.png" alt="php logo" style="border-radius: 50px;" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/code-images/5.png" alt="" class="code-images" >
+                        <img src="images/code-images/5.png" alt="java logo" class="code-images" >
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/code-images/6.svg.png" alt="" class="code-images">
+                        <img src="images/code-images/6.svg.png" alt="sql logo" class="code-images">
                         <progress max="100" value="90">70%</progress>
                     </section>
                 </div>
                 <div class="row">
                     <section class="language-section">
-                        <img src="images/code-images/7.png" alt="" class="code-images">
+                        <img src="images/code-images/7.png" alt="C logo" class="code-images">
                         <progress max="100" value="95">95%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/code-images/8.svg.png" alt="" class="code-images">
+                        <img src="images/code-images/8.svg.png" alt="sass logo" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/bootstrap-logo.png" alt="" class="code-images">
+                        <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                 </div>
@@ -134,7 +137,7 @@
           </article>
         </section>
 
-        <!--SECCION DE PROYECTOS-->
+          <!--SECCION DE PROYECTOS-->
         <section id="my-project-box" style="display: none;">
           <article class="main-header">
               <h1>MY PROJECTS</h1>
@@ -144,13 +147,13 @@
               <div id="projects-row">
                   <img src="images/projects-images/tarta-carta.PNG" alt="proyecto tarta"
                        class="projects-images" onclick="showProjectDetails('tarta-carta')">
-                  <img src="images/projects-images/instituto-sapiencia.PNG" alt="proyecto tarta"
+                  <img src="images/projects-images/instituto-sapiencia.PNG" alt="proyecto instituto sapiencia"
                        class="projects-images" onclick="showProjectDetails('instituto-sapiencia')">
               </div>
               <div id="projects-row">
-                  <img src="images/projects-images/japaneasy.PNG" alt="proyecto tarta"
+                  <img src="images/projects-images/japaneasy.PNG" alt="proyecto japaneasy"
                        class="projects-images" onclick="showProjectDetails('japaneasy')">
-                  <img src="images/projects-images/one-4-all.PNG" alt="proyecto tarta"
+                  <img src="images/projects-images/one-4-all.PNG" alt="proyecto one4all"
                        class="projects-images" onclick="showProjectDetails('one4all')">
               </div>
           </article>
@@ -164,7 +167,7 @@
               </div>
           </article>
 
-                <!-- Modal para mostrar información adicional -->
+                <!-- MoODAL QUE IRÁ CAMBIANDO DEPENDIENDO DEL VÍDEO QUE SE PRESIONE -->
         <div id="projectModal" class="modal" style="display: none;">
           <div class="modal-content">
             <span onclick="closeProjectDetails()" style="cursor: pointer; float: right;">&times;</span>
@@ -173,30 +176,30 @@
   </div>
 </div>
 
-<!--AQUÍ IRÁN LOS DIFERENTES VÍDEOS QUE MOSTRARÁN EL CONTENIDO-->
+<!--AQUÍ IRÁN LOS DIFERENTES VÍDEOS QUE MOSTRARÁN EL CONTENIDO. SE CARGARÁN DINÁMICAMENTE-->
         <div id="tarta-carta" style="display: none;"  class="video-content">
           <h2 class="video-header">TARTA A LA CARTA (MAKE THE CAKE)</h2>
-          <video src="videos/tarta-carta-video.mkv" class="proyect-videos" id="tarta-carta-video" onended="reproducirNuevamente('tarta-carta-video')" autoplay></video>
+          <video src="videos/tarta-carta-video.mp4" class="proyect-videos" id="tarta-carta-video" onended="reproducirNuevamente('tarta-carta-video')" autoplay></video>
         </div>
 
         <div id="instituto-sapiencia" style="display: none;"  class="video-content">
          <h2 class="video-header">INSTITUTO SAPIENCIA (SAPERE AUDE)</h2>
-         <video src="videos/instituto-sapiencia-video.mkv" class="proyect-videos" id="instituto-sapiencia-video" onended="reproducirNuevamente('instituto-sapiencia-video')" autoplay></video>
+         <video src="videos/instituto-sapiencia-video.mp4" class="proyect-videos" id="instituto-sapiencia-video" onended="reproducirNuevamente('instituto-sapiencia-video')" autoplay></video>
         </div>
 
         <div id="japaneasy" style="display: none;"  class="video-content">
           <h2 class="video-header">JAPANEASY: LEARN JAPANESE THE FUNNY WAY</h2>
-          <video src="videos/japaneasy-video.mkv" class="proyect-videos" id="japaneasy-video" onended="reproducirNuevamente('japaneasy-video')" autoplay></video>
+          <video src="videos/japaneasy-video.mp4" class="proyect-videos" id="japaneasy-video" onended="reproducirNuevamente('japaneasy-video')" autoplay></video>
           </div>
 
         <div id="one4all" style="display: none;" class="video-content">
           <h2 class="video-header"    >ONE 4 ALL: ALL YOU NEED IN ONE WEB</h2>
-          <video src="videos/one4all-video.mkv" class="proyect-videos" id="one4all-video" onended="reproducirNuevamente('one4all-video')" muted autoplay></video>
+          <video src="videos/one4all-video.mp4" class="proyect-videos" id="one4all-video" onended="reproducirNuevamente('one4all-video')" muted autoplay></video>
         </div>
       </section>
 
 
-        <!--ZONA DE CONTACTO-->
+          <!--ZONA DE CONTACTO-->
         <section id="my-contact-box" style="display: none;">
           <article class="main-header">
               <h1>MY CONTACT</h1>
@@ -213,7 +216,7 @@
                   <img src="icons/linkedin-ico.png" alt="linkedin icon" class="contact-icons"><span class="my-contact-text">Carlos Almira Pérez</span>
               </div>
               <div class="contact-boxes">
-                  <img src="icons/codepen-ico.png" alt="linkedin icon" class="contact-icons"><span class="my-contact-text">@CarlosAlmira</span>
+                  <img src="icons/codepen-ico.png" alt="codepen icon" class="contact-icons"><span class="my-contact-text">@CarlosAlmira</span>
               </div>
           </article>
           <article class="main-footer" id="contact-footer">
@@ -227,15 +230,23 @@
         </div>
     </div>
 </div>
+
+<!--SCRIPT PRINCIPAL-->
 <script>
-  const menuSelectedSound = new Audio ("sounds/option-selected2.mp3")
+  //CONSTANTES DE AUDIO
+  const menuSelectedSound = new Audio ("sounds/option-selected2.mp3");
   menuSelectedSound.volume = 0.6;
+  const videoSelectedSound = new Audio ("sounds/option.mp3");
+  videoSelectedSound.volume = 0.6;
+
+  //CONSTANTES PARA ACCEDER A LAS 4 SECCIONES PRINCIPALES, INCLUIDO EL MENÚ PRINCIPAL
   const mainImportantBox = document.getElementById("main-box");
   const boutMeBox = document.getElementById("about-me-box");
   const skillsBox = document.getElementById("my-skills-box");
   const projectBox = document.getElementById("my-project-box");
   const contactBox = document.getElementById("my-contact-box");
 
+  //FUNCIONES PARA MOSTRAR LAS SECCIONES Y CAMBIAR EL FAVICON
   function showAboutMeSection(){
     menuSelectedSound.play();
     resizeBox();
@@ -265,9 +276,10 @@
     document.getElementById('my-favicon').href = 'images/C.png';
     document.getElementById('dynamicTitle').innerText  = "My Contact";
   }
+
     // Funciones para mostrar y cerrar el modal de detalles del proyecto
     function showProjectDetails(cardId) {
-      menuSelectedSound.play();
+      videoSelectedSound.play();
         const cardBox = document.getElementById(cardId);
         const projectDetailsContent = document.getElementById("projectDetailsContent");
         projectDetailsContent.innerHTML = cardBox.innerHTML;
@@ -280,22 +292,39 @@
         projectModal.style.display = "none"; // Ocultar el modal
     }
 
+  //FUNCIÓN PARA VOLVER A REPRODUCIR EL VÍDEO
     function reproducirNuevamente(videoId) {
       var miVideo = document.getElementById(videoId);
       miVideo.currentTime = 0;
       miVideo.play(); //Reproducimos de nuevo el vídeo
   }
 
+  //FUNCIÓN PARA REDIMENSIONAR LA CAJA
   function resizeBox() {
     mainImportantBox.style.width = "90%";
     mainImportantBox.style.height = "90%";
 }
-
+  //FUNCIÓN PARA REDIMENSIONAR LA CAJA Y HACERLA MÁS CHIQUITA
 function resizeTinyBox() {
   mainImportantBox.style.width = "50%";
   mainImportantBox.style.height = "75%";
 }
 
+</script>
+
+<!--SCRIPT DE AUDIO PARA EL MENÚ PRINCIPAL-->
+<script>
+
+    const optionSelectedAudio = new Audio('sounds/option-selected.mp3');
+    const mainMenuSection = document.querySelectorAll(".menu-option");
+    
+    //Vamos a sacar todos los elementos
+
+    mainMenuSection.forEach((menuSection)=>{
+      menuSection.addEventListener("click",()=>{
+        optionSelectedAudio.play();
+      })
+    });
 </script>
 
 <script src="script/main.js" async></script>
