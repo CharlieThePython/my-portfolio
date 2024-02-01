@@ -1,3 +1,10 @@
+
+
+/**
+ * @author Carlos Almira Pérez
+ * @description Código para manejar los eventos
+ */
+//EVENT LISTENER PARA QUE TODO SE CARGUE CUANDO WINDOW HAYA CARGADO
 window.addEventListener("load", () => {
     //DEFINCIÓN DE CONSTANTES
 

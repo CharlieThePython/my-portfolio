@@ -26,5 +26,13 @@
 
 .code-images{
     width: 80px;
+}
 
+/*ESTILO ESPECÍFICO PARA MOZILLA*/
+@-moz-document url-prefix() {
+    progress {
+        border-radius: 25px;
+        border: 1px solid #ccc; /* Añadir borde en Firefox */
+        background-color: #f0f0f0; /* Color de fondo en Firefox */
+    }
 }

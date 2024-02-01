@@ -14,14 +14,14 @@
     width: 29%;
     border-radius: 50px;
     object-fit:cover;
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: width 0.2s ease, height 0.2s ease;
 }
 
 .projects-images:hover{
     width: 32%;
     border-radius: 50px;
     object-fit:cover;
-    transition: width 0.3s ease-out, height 0.3s ease-out;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
     cursor: pointer;
     
 }

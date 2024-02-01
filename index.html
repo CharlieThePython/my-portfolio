@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--ETIQUETAS META IMPORTANTES PARA POSICIONAR MEJOR LA PÁGINA DEL PORTFOLIO-->
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="images/pixel-icon.png" type="image/x-icon" id="my-favicon">
+ <meta name="author" content="Charlie The Python">
+ <meta name="keywords" content="Coding Portfolio, portfolio, software development portfolio, Main Portfolio">
+ <meta name="robots" content="index, follow">
+<link rel="icon" href="images/pixel-icon.png" type="image/x-icon" id="my-favicon">
 <link rel="stylesheet" href="styles/styles.css">
 <link rel="stylesheet" href="styles/text-style.css">
 <link rel="stylesheet" href="styles/about-me.css">
@@ -96,13 +100,13 @@
                         <progress max="100" value="90">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/js-logo.png" alt="javascript logo"  class="code-images">
+                        <img src="images/code-images/3.png" alt="javascript logo"  class="code-images">
                         <progress max="100" value="65">70%</progress>
                     </section>
                 </div>
                 <div class="row">
                     <section class="language-section">
-                        <img src="images/php-logo.png" alt="php logo" style="border-radius: 50px;" class="code-images">
+                        <img src="images/code-images/4.png" alt="php logo" style="border-radius: 50px;" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
@@ -110,7 +114,7 @@
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/code-images/6.svg.png" alt="sql logo" class="code-images">
+                        <img  src="images/code-images/6.svg.png" alt="sql logo" class="code-images">
                         <progress max="100" value="90">70%</progress>
                     </section>
                 </div>
@@ -124,7 +128,7 @@
                         <progress max="100" value="50">70%</progress>
                     </section>
                     <section class="language-section">
-                        <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="code-images">
+                        <img src="images/code-images/9.svg.png" alt="bootstrap logo" class="code-images">
                         <progress max="100" value="50">70%</progress>
                     </section>
                 </div>
@@ -316,6 +320,7 @@ function resizeTinyBox() {
 <script>
 
     const optionSelectedAudio = new Audio('sounds/option-selected.mp3');
+    optionSelectedAudio.volume = 0.4;
     const mainMenuSection = document.querySelectorAll(".menu-option");
     
     //Vamos a sacar todos los elementos
@@ -327,6 +332,7 @@ function resizeTinyBox() {
     });
 </script>
 
+<!--SCRIPT SECUNDARIO-->
 <script src="script/main.js" async></script>
 </body>
 </html>
