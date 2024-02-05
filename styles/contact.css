@@ -50,3 +50,66 @@
 .my-contact-text{
     font-size: 0.9em;
 }
+
+
+@media screen and (max-width: 320px) and (max-height: 480px) {
+
+
+    #main-contact-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        z-index: 2;
+    }
+    
+    .contact-icons{
+        width: 20px;
+        height:20px;
+        text-align: left;
+    }
+    
+    
+    .contact-boxes{
+        display: flex;
+        justify-content:safe;
+        width: 85%;
+        margin-bottom: 6%;
+        margin-right: 5%;
+    }
+    
+    .contact-boxes:first-child{
+        margin-top: 5%;
+    }
+    
+    .my-contact-text{
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+    
+    #contact-footer{
+        margin-top: 75%;
+        font-size: 0.6em;
+        text-align: center;
+    }
+    
+    .nav-box-contact{
+        background-color: #486828;
+        width: 25px;
+        padding: 1.5%;
+        color: white;
+        border-radius: 25px;
+    }
+    
+    .nav-box-contact:hover{
+        cursor: pointer;
+    }
+    
+    .my-contact-text{
+        font-size: 0.65em;
+    }
+
+
+}
